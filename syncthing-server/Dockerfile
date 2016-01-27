@@ -11,4 +11,4 @@ RUN apt-get update \
     && wget https://github.com/syncthing/discosrv/releases/download/$SYNCTHING_DISCOSRV_VERSION/discosrv-linux-amd64.tar.gz \
     && tar xf discosrv-linux-amd64.tar.gz -C $SYNCTHING_DIR --strip-components 1 \
     && wget https://github.com/syncthing/relaysrv/releases/download/$SYNCTHING_RELAYSRV_VERSION/relaysrv-linux-amd64.tar.gz \
-    && relaysrv-linux-amd64.tar.gz -C $SYNCTHING_DIR --strip-components 1 \
+    && tar xf relaysrv-linux-amd64.tar.gz -C $SYNCTHING_DIR --strip-components 1 \
