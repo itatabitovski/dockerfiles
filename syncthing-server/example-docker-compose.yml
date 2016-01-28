@@ -1,0 +1,17 @@
+discovery:
+  extends:
+    file: base-compose.yml
+    service: base_discovery
+    volumes:
+    - /etc/letsencrypt/archive/$SYNCTHING_FQDN:/etc/letsencrypt/archive/$SYNCTHING_FQDN:ro
+    - /etc/letsencrypt/live/$SYNCTHING_FQDN:/etc/letsencrypt/live/$SYNCTHING_FQDN:ro
+    cmd: -cert /etc/letsencrypt/live/$SYNCTHING_FQDN/fullchain.pem -key /etc/letsencrypt/live/$SYNCTHING_FQDN/privkey.pem
+
+relay:
+  extends:
+    file: base-compose.yml
+    service: base_relay
+    volumes:
+    - /etc/letsencrypt/archive/$SYNCTHING_FQDN:/etc/letsencrypt/archive/$SYNCTHING_FQDN:ro
+    - /etc/letsencrypt/live/$SYNCTHING_FQDN:/etc/letsencrypt/live/$SYNCTHING_FQDN:ro
+    cmd: -cert /etc/letsencrypt/live/$SYNCTHING_FQDN/fullchain.pem -key /etc/letsencrypt/live/$SYNCTHING_FQDN/privkey.pem
