@@ -2,7 +2,7 @@ FROM debian:latest
 
 ENV SYNCTHING_DIR /opt/syncthing
 ENV SYNCTHING_DISCOSRV_VERSION v0.12.2
-ENV SYNCTHING_RELAYSRV_VERSION v0.12.1
+ENV SYNCTHING_RELAYSRV_VERSION v0.12.18
 
 RUN apt-get update \
     && apt-get install -y wget \
