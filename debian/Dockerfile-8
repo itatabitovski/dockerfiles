@@ -1,0 +1,3 @@
+FROM debian:jessie
+
+COPY apt-install.sh /usr/local/bin/apt-install
