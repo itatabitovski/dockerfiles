@@ -1,3 +1,3 @@
 #!/bin/sh
 
-apk add --update "$@" && rm -rf /var/cache/apk/*
+apk add --no-cache --update "$@" && rm -rf /var/cache/apk/*
