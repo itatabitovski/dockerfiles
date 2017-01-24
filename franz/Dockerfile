@@ -13,4 +13,6 @@ RUN apt-install wget \
 	wget https://github.com/meetfranz/franz-app/releases/download/$FRANZ_VERSION/Franz-linux-x64-$FRANZ_VERSION.tgz && \
 	tar xf Franz*.tgz && rm Franz*.tgz
 
-ENTRYPOINT ["/opt/franz/Franz"]
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
