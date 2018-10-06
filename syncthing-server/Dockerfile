@@ -1,8 +1,8 @@
-FROM itatabitovski/debian:jessie
+FROM itatabitovski/debian:stretch
 
 ENV SYNCTHING_DIR /opt/syncthing
-ENV SYNCTHING_DISCOSRV_VERSION v0.14.5
-ENV SYNCTHING_RELAYSRV_VERSION v0.14.5
+ENV SYNCTHING_DISCOSRV_VERSION v0.14.51
+ENV SYNCTHING_RELAYSRV_VERSION v0.14.48
 
 RUN apt-install wget \
                 ca-certificates && \
